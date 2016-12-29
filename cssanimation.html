@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+#sky{
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	background-color: lightblue;
+}
+#grass{
+	position: absolute;
+	width: 100%;
+	top: 250px;
+	height: 200px;
+	background-color: green;
+}
+#road{
+	position: absolute;
+	width: 100%;
+	top: 450px;
+	height: 300px;
+	background-color: gray;
+}
+#mario1{
+	position: relative;
+	background: url(mariocar.png);
+	background-position-x: 345px;
+	width: 110px;
+	height: 110px;
+	bottom: 180px;
+	animation: drive 10s linear  infinite;
+}
+#mario2{
+	position: absolute;
+	background: url(mariocar.png);
+	background-position-x: 345px;
+	width: 110px;
+	height: 110px;
+	bottom: 20px;
+	animation: drive 18s linear  infinite;
+}
+@keyframes drive{
+	0%{transform: translateX(-10px);}
+	100%{transform: translateX(1700px);}
+}
+.cloud{
+	background: url(Cloud.png);
+	width: 220px;
+	height: 160px;
+}
+.cloud:nth-child(2){
+    position: relative;
+    top: -80px;
+    left: 40px;
+    opacity: 0.6;
+    transform: scale(.8);
+    animation: drive 40s linear  infinite reverse;
+}
+.cloud:nth-child(1){
+    position: relative;
+    animation: drive 55s linear  infinite reverse;
+}
+
+</style>
+</head>
+<body style="margin:0px">
+    <div id="sky">
+    	<div class="cloud"></div>
+    	<div class="cloud"></div>
+    </div>
+    <div id="grass">
+    	
+    </div>
+    <div id="road">
+    	<p style="border-style:dashed;border-width: 5px; margin-top: 145px; color: white"></p>
+    	<div id="mario1"></div>
+    	<div id="mario2"></div>
+    </div>
+</body>
+</html>
